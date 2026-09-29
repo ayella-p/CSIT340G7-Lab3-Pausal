@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600&display=swap');
+
+body {
+  background-color: #080d17; 
+  color: #e5d3b3; /* Cream/parchment text */
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(217, 90, 83, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(168, 192, 216, 0.05) 0%, transparent 40%);
+}
+
+.app-container {
+  background: rgba(20, 32, 48, 0.85); 
+  border: 1px solid #2a3d54;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(168, 192, 216, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+.header-title {
+  font-family: 'Playfair Display', serif;
+  color: #e5c185; 
+  font-size: 2.2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(229, 193, 133, 0.2);
+  padding-bottom: 20px;
+}
+
+.part-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #b5c7d6; 
+  padding: 14px 0;
+  margin: 0;
+  border-bottom: 1px dashed rgba(181, 199, 214, 0.15);
+}
+
+.part-name {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.part-exercises {
+  font-family: 'Playfair Display', serif;
+  color: #e5c185;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.total-units {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #d95a53; 
+  font-size: 1.3rem;
+  text-align: right;
+  margin-top: 25px;
+  background: rgba(217, 90, 83, 0.08);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(217, 90, 83, 0.2);
+}
+
+.footer-text {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b8299; 
+  font-style: italic;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
