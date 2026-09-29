@@ -1,28 +1,26 @@
 const App = () => {
   const course = 'BS Information Technology'
-  const part1 = 'Fundamentals of Programming'
-  const exercises1 = 3
-  const part2 = 'Object-Oriented Programming 2'
-  const exercises2 = 3
-  const part3 = 'Data Structures and Algorithms'
-  const exercises3 = 3
+  const part1 = {
+    name: 'Fundamentals of Programming',
+    exercises: 3
+  }
+  const part2 = {
+    name: 'Object-Oriented Programming 2',
+    exercises: 3
+  }
+  const part3 = {
+    name: 'Data Structures and Algorithms',
+    exercises: 3
+  }
 
   const studentName = 'Ayella A. Pausal'
   const courseCode = 'CSIT340'
   const section = 'G7'
-
   return (
     <div>
       <Header course={course} />
-      <Content
-        part1={part1}
-        exercises1={exercises1}
-        part2={part2}
-        exercises2={exercises2}
-        part3={part3}
-        exercises3={exercises3}
-      />
-      <Total sum={exercises1 + exercises2 + exercises3} />
+      <Content part1={part1} part2={part2} part3={part3} />
+      <Total sum={part1.exercises + part2.exercises + part3.exercises} />
       <Footer name={studentName} code={courseCode} section={section} />
     </div>
   )
@@ -35,16 +33,9 @@ const Header = (props) => {
 const Content = (props) => {
   return (
     <div>
-
-      <p>
-        {props.part1} {props.exercises1}
-      </p>
-      <p>
-        {props.part2} {props.exercises2}
-      </p>
-      <p>
-        {props.part3} {props.exercises3}
-      </p>
+      <Part part={props.part1} />
+      <Part part={props.part2} />
+      <Part part={props.part3} />
     </div>
   )
 }
@@ -57,6 +48,13 @@ const Footer = (props) => {
   return (
     <p>
       {props.name} - {props.code} - {props.section}
+    </p>
+  )
+}
+const Part = (props) => {
+  return (
+    <p>
+      {props.part.name} {props.part.exercises}
     </p>
   )
 }
