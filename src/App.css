@@ -1,86 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700&display=swap');
 
 body {
-  background-color: #080d17; 
-  color: #e5d3b3; /* Cream/parchment text */
-  font-family: 'Raleway', sans-serif;
+  background-color: #d6ead4; 
+  background-image: radial-gradient(#b8d8b5 2.5px, transparent 2.5px);
+  background-size: 16px 16px;
+  color: #2c4c3b; 
+  font-family: 'Space Mono', monospace; 
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: 
-    radial-gradient(circle at 15% 20%, rgba(217, 90, 83, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(168, 192, 216, 0.05) 0%, transparent 40%);
 }
 
 .app-container {
-  background: rgba(20, 32, 48, 0.85); 
-  border: 1px solid #2a3d54;
-  border-radius: 12px;
-  padding: 40px;
-  max-width: 600px;
+  background-color: #f7fbf5; 
+  max-width: 380px; 
+  max-height: 400px;
   width: 90%;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(168, 192, 216, 0.05);
-  backdrop-filter: blur(8px);
+  padding: 50px 40px;
+  position: relative;
+  border: 4px solid #2c4c3b; 
+}
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px dashed #e49caf; 
+  pointer-events: none;
 }
 
 .header-title {
-  font-family: 'Playfair Display', serif;
-  color: #e5c185; 
-  font-size: 2.2rem;
+  font-family: 'Rokkitt', serif;
+  font-size: 2.3rem;
+  font-weight: 900;
   text-align: center;
-  letter-spacing: 2px;
-  margin-top: 0;
-  margin-bottom: 30px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid rgba(229, 193, 133, 0.2);
-  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: #2c4c3b;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+
+.header-title::before, .header-title::after {
+  content: '★';
+  font-size: 1.2rem;
+  color: #e49caf; 
+  margin: 0 10px;
 }
 
 .part-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.1rem;
-  color: #b5c7d6; 
-  padding: 14px 0;
+  font-size: 0.9rem;
+  border-bottom: 2px dotted #a8c4a5;
+  padding: 12px 0;
   margin: 0;
-  border-bottom: 1px dashed rgba(181, 199, 214, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .part-name {
-  font-weight: 400;
-  letter-spacing: 0.5px;
+  font-weight: 700;
 }
 
 .part-exercises {
-  font-family: 'Playfair Display', serif;
-  color: #e5c185;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-family: 'Rokkitt', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #e49caf; 
 }
 
 .total-units {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-  color: #d95a53; 
-  font-size: 1.3rem;
-  text-align: right;
-  margin-top: 25px;
-  background: rgba(217, 90, 83, 0.08);
+  text-align: center;
+  margin-top: 30px;
   padding: 15px;
-  border-radius: 8px;
-  border: 1px solid rgba(217, 90, 83, 0.2);
+  background-color: #2c4c3b; 
+  color: #f7fbf5;
+  font-family: 'Rokkitt', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px dashed #a8c4a5;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-text {
-  margin-top: 35px;
+  margin-top: 25px;
   text-align: center;
-  font-size: 0.85rem;
-  color: #6b8299; 
-  font-style: italic;
-  letter-spacing: 1.5px;
+  font-size: 0.75rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #557760;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
